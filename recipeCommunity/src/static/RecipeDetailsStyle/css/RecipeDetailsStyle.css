@@ -1,0 +1,16 @@
+/* Recipe Details */
+.recipe-details {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.recipe-details h2 {
+    margin-top: 0;
+}
+
+.ingredients, .instructions {
+    padding-left: 20px;
+}

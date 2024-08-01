@@ -1,0 +1,54 @@
+.reviewed-recipes {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.reviewed-recipes h2 {
+    margin-top: 0;
+}
+
+.reviewed-recipes ul {
+    list-style: none;
+    padding: 0;
+}
+
+.reviewed-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.reviewed-item:last-child {
+    border-bottom: none;
+}
+
+.reviewed-item .recipe-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.reviewed-item .recipe-info h4 {
+    margin: 0;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+
+    .reviewed-recipes {
+        padding: 15px;
+    }
+
+    .reviewed-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .recipe-info, .reviewed-item {
+        gap: 2px;
+    }
+}

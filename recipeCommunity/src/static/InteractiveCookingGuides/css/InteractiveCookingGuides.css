@@ -1,0 +1,162 @@
+/* Container and Flexbox Setup */
+.cooking-guides .container {
+    text-align: center;
+}
+
+.cooking-guides h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.search-bar-interactive-cooking-guides {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.search-bar-interactive-cooking-guides input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px 0 0 4px;
+    outline: none;
+}
+
+.search-bar-interactive-cooking-guides button {
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    background-color: #3498db;
+    color: #fff;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    outline: none;
+}
+
+.filter-options {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.filter-options select {
+    padding: 10px;
+    font-size: 16px;
+    margin: 0 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    outline: none;
+}
+
+.guide-thumbnails {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.guide-thumbnail {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    max-width: 200px;
+    text-align: center;
+}
+
+.guide-thumbnail:hover {
+    transform: translateY(-5px);
+}
+
+.guide-thumbnail img {
+    width: 100%;
+    height: auto;
+    border-bottom: 2px solid #3498db;
+}
+
+.guide-info {
+    padding: 15px;
+}
+
+.guide-info h3 {
+    font-size: 1.25em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.guide-metadata {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.875em;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+.guide-metadata span {
+    margin: 0 5px;
+}
+
+.guide-info p {
+    font-size: 1em;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.guide-rating {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.guide-rating .stars {
+    color: #ffa500;
+}
+
+.guide-rating .rating {
+    margin-left: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+.explore-guides-btn {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.explore-guides-btn:hover {
+    background-color: #2980b9;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .guide-thumbnails {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .guide-thumbnail {
+        flex: 1 1 calc(33.33% - 20px);
+        max-width: calc(33.33% - 20px);
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .guide-thumbnail {
+        flex: 1 1 calc(50% - 20px); /* Two thumbnails per row */
+        max-width: calc(50% - 20px);
+    }
+}

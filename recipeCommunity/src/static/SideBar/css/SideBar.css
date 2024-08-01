@@ -1,0 +1,44 @@
+.sidebar {
+    background-color: #333;
+    color: white;
+    padding: 40px 20px;
+    width: 200px;
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+    position: fixed;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    cursor: url("../../media/images/fork3.jpg"), auto;
+    margin-top: 10px;
+}
+
+.sidebar nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar nav li {
+    margin: 15px 0;
+}
+
+.sidebar nav button {
+    color: white;
+    text-decoration: none;
+    padding: 0;
+    border: none;
+    background: none;
+
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .sidebar {
+        transform: translateX(-100%);
+    }
+
+    .sidebar.active {
+        transform: translateX(0);
+    }
+}

@@ -1,0 +1,125 @@
+import React from "react";
+import RecipeHeader from "../RecipeHeader/RecipeHeader";
+import RecipeImagesComponent from "../RecipeImagesComponent/RecipeImagesComponent";
+import RecipeDetailsComponent from "../RecipeDetailsComponent/RecipeDetailsComponent";
+import RecipeVideoComponent from "../RecipeVideoComponent/RecipeVideoComponent";
+import CommentsComponent from "../CommentsComponent/CommentsComponent";
+
+function RecipePageComponent() {
+    return (
+        <>
+            <RecipeHeader />
+            <RecipeImagesComponent />
+            <RecipeDetailsComponent />
+            <RecipeVideoComponent />
+            <CommentsComponent />
+        </>
+    )
+}
+
+export default RecipePageComponent;
+
+import React from 'react';
+import '../../static/RecipeHeaderStyle/css/RecipeHeaderStyle.css'
+
+const RecipeHeader = () => {
+    const viewProfile = () => {
+        // Define your profile viewing logic here
+        console.log('View Profile clicked');
+    };
+
+    return (
+        <section className="recipe-header-recipe-page">
+            <h1>Delicious Chocolate Cake</h1>
+            <div className="author-info">
+                <img 
+                    src="https://yt3.ggpht.com/ytc/AIdro_mWu9sDW1HbHT3SVjTeIRPN3kvtW_SZN6HBKyReFKpzshM=s88-c-k-c0x00ffffff-no-rj" 
+                    alt="Author" 
+                    className="author-image"
+                />
+                <span>By Jane Doe</span>
+                <button className="view-profile-btn" onClick={viewProfile}>View Profile</button>
+            </div>
+            <div className="recipe-info-recipe-page">
+                <span>Prep Time: 20 mins</span>
+                <span>Cook Time: 30 mins</span>
+                <span>Servings: 8</span>
+                <span>Difficulty: Easy</span>
+                <span>Cuisine: American</span>
+                <div className="rating">
+                    <span>Rating: 4.5/5</span>
+                    <span className="stars">★★★★☆</span>
+                </div>
+            </div>
+        </section>
+    );
+};
+
+export default RecipeHeader;
+
+import React from 'react';
+import '../../static/RecipeVideoStyle/css/RecipeVideoStyle.css'
+
+const RecipeVideoComponent = () => {
+    return (
+        <section className="recipe-video">
+            <h2>Watch the Recipe</h2>
+            <div className="video-container">
+                <iframe 
+                    src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                    frameBorder="0" 
+                    allowFullScreen
+                    title="Recipe Video"
+                ></iframe>
+            </div>
+        </section>
+    );
+};
+
+export default RecipeVideoComponent;
+
+import React from 'react';
+import '../../static/RecipeDetailsStyle/css/RecipeDetailsStyle.css'
+
+const RecipeDetailsComponent = () => {
+    const ingredients = [
+        "1 cup sugar",
+        "1/2 cup butter",
+        "2 eggs",
+        "1 1/2 cups flour",
+        "1 tsp baking powder",
+        "1/2 cup cocoa powder",
+        "1 cup milk"
+    ];
+
+    const instructions = [
+        "Preheat the oven to 350°F (175°C).",
+        "Cream the butter and sugar until light and fluffy.",
+        "Add the eggs one at a time, beating well after each addition.",
+        "Sift together the flour, baking powder, and cocoa powder.",
+        "Add the dry ingredients alternately with the milk, beginning and ending with the dry ingredients.",
+        "Pour the batter into a greased and floured 9x13 inch pan.",
+        "Bake for 30 to 35 minutes, or until a toothpick inserted into the center comes out clean.",
+        "Let the cake cool in the pan for 10 minutes, then turn out onto a wire rack to cool completely."
+    ];
+
+    return (
+        <section className="recipe-details">
+            <h2>Ingredients</h2>
+            <ul className="ingredients">
+                {ingredients.map((ingredient, index) => (
+                    <li key={index}>{ingredient}</li>
+                ))}
+            </ul>
+
+            <h2>Instructions</h2>
+            <ol className="instructions">
+                {instructions.map((instruction, index) => (
+                    <li key={index}>{instruction}</li>
+                ))}
+            </ol>
+        </section>
+    );
+};
+
+export default RecipeDetailsComponent;
